@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2</title>
+    <script src="js/app.js" defer></script> <!--Conectar con JS el html -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+      <div id="app">
+
+    <div class="info-estudiante">
+      <h2>Información del Estudiante</h2>
+      <p><strong>Nombre:</strong> <span id="estudiante-nombre">David Larriva</span></p>
+      <p><strong>Carrera:</strong> <span id="estudiante-carrera">Ingeneria en Ciencas de la computación</span></p>
+      <p><strong>Semestre:</strong> <span id="estudiante-semestre">5to Ciclo</span></p>
+    </div>
+
+    <div class="estadisticas">
+      <h2>Estadísticas</h2>
+      <p><strong>Total:</strong> <span id="total-elementos"></span></p>
+      <p><strong>Activos:</strong> <span id="elementos-activos"></span></p>
+    </div>
+
+    <div class="filtros">
+      <button class="btn-filtro btn-filtro-activo" data-categoria="todas">Todas</button>
+      <button class="btn-filtro" data-categoria="Trabajo">Trabajo</button>
+      <button class="btn-filtro" data-categoria="Personal">Personal</button>
+      <button class="btn-filtro" data-categoria="Estudio">Estudio</button>
+    </div>
+
+    <div id="contenedor-lista">
+      <!-- La practica consiste en crear elementos en el JS y añadirlos al DOOM-->
+      <!-- Las tarjetas se insertarán aquí -->
+    </div>
+
+  </div>
+</body>
+</html>

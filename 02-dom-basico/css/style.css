@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #eef2f6;
+  color: #1f2937;
+  padding: 2rem;
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info-estudiante,
+.estadisticas {
+  margin-bottom: 1.5rem;
+}
+
+.info-estudiante h2,
+.estadisticas h2 {
+  color: #0b3b78;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-estudiante p,
+.estadisticas p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.info-estudiante strong,
+.estadisticas strong {
+  color: #111827;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.btn-filtro {
+  background: #f3f4f6;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-filtro:hover {
+  background: #e5e7eb;
+}
+
+.btn-filtro-activo {
+  background: #0b3b78;
+  color: white;
+  border-color: #0b3b78;
+  box-shadow: 0 4px 10px rgba(11, 59, 120, 0.25);
+}
+
+#contenedor-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dbe3ec;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card h3 {
+  color: #0b3b78;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.badge-categoria {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.prioridad-alta {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.prioridad-media {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.prioridad-baja {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.estado-activo {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.estado-inactivo {
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-eliminar {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-eliminar:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .info-estudiante h2,
+  .estadisticas h2 {
+    font-size: 1.6rem;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .info-estudiante p,
+  .estadisticas p,
+  .card p {
+    font-size: 1rem;
+  }
+
+  .btn-filtro {
+    width: 100%;
+  }
+
+  .card-actions {
+    justify-content: flex-start;
+  }
+}
