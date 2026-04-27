@@ -1,0 +1,63 @@
+:root {
+    --bg-primary: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f9f9f9;
+    --border-color: #dddddd;
+    --primary-color: #3498db;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+.header_title { margin: 0; color: var(--primary-color); }
+.header_subtitle { color: #7f8c8d; font-size: 0.9em; }
+
+.theme-selector { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+.theme-btn { background: transparent; border: 2px solid var(--border-color); color: var(--text-color); padding: 8px 15px; border-radius: 20px; cursor: pointer; transition: 0.2s; }
+.theme-btn.theme-btn--active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
+
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-weight: bold; margin-bottom: 8px; }
+.form-input-group { display: flex; gap: 10px; }
+.form-input { flex: 1; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px; background: var(--bg-primary); color: var(--text-color); }
+.btn { border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+.btn--primary { background: var(--primary-color); color: white; }
+.btn--primary:hover { opacity: 0.9; }
+.btn--danger { background: var(--danger-color); color: white; }
+.btn--danger:hover { opacity: 0.9; }
+.btn--small { padding: 5px 10px; font-size: 0.8em; }
+
+.tasks-list { list-style: none; padding: 0; margin: 0 0 20px 0; }
+.task-item { display: flex; align-items: center; background: var(--bg-primary); padding: 12px; border: 1px solid var(--border-color); border-radius: 5px; margin-bottom: 10px; transition: 0.2s; }
+.task-item:hover { transform: translateX(5px); }
+.task-item_checkbox { margin-right: 15px; cursor: pointer; }
+.task-item_text { flex: 1; cursor: pointer; }
+.task-item--completed .task-item_text { text-decoration: line-through; color: #95a5a6; }
+
+.mensaje { padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 20px; font-weight: bold; color: white; }
+.mensaje--success { background-color: var(--success-color); }
+.mensaje--error { background-color: var(--danger-color); }
+.oculto { display: none; }
+.empty-state { text-align: center; color: #7f8c8d; font-style: italic; padding: 20px; }
+
+.actions { display: flex; justify-content: flex-end; }
+.footer { text-align: center; margin-top: 30px; font-size: 0.8em; color: #95a5a6; }

@@ -1,0 +1,184 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --primary: #1a73e8;
+    --primary-hover: #1557b0;
+    --success: #2ecc71;
+    --error: #e74c3c;
+    --border: #dddddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    color: var(--primary);
+    margin: 0 0 10px 0;
+}
+
+.header p {
+    color: #777777;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input:not([type="checkbox"]), 
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, 
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* --- Feedback Visual Requerido --- */
+
+.campo--error {
+    border-color: var(--error) !important;
+    background-color: #fdf2f2;
+}
+
+.campo--valido {
+    border-color: var(--success) !important;
+    background-color: #f0fdf4;
+}
+
+.error-mensaje {
+    color: var(--error);
+    font-size: 0.85rem;
+    margin-top: 5px;
+    min-height: 1.2em;
+    animation: fadeIn 0.3s;
+}
+
+/* --- Checkbox y Password --- */
+
+.checkbox-grupo {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.password-strength {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #777777;
+    transition: color 0.3s;
+}
+
+/* --- Botón e Interfaz --- */
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background: var(--primary-hover);
+}
+
+button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.mensaje-global {
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    animation: slideDown 0.3s;
+}
+
+.mensaje--exito {
+    background-color: var(--success);
+}
+
+/* --- Animaciones --- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
